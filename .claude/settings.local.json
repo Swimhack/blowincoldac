@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fly deploy:*)",
+      "Bash(fly status:*)",
+      "WebFetch(domain:blowincold.fly.dev)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

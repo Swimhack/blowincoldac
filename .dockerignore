@@ -1,0 +1,11 @@
+.git
+.gitignore
+*.md
+.claude/
+DESIGN/
+fly.toml
+Dockerfile
+.dockerignore
+node_modules/
+.env
+.DS_Store
