@@ -214,7 +214,79 @@ a:hover {
     z-index: 1000;
     background-color: white;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.main-header.scrolled {
+    box-shadow: var(--shadow-md);
+}
+
+.main-header.scrolled .contact-bar {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Contact Bar Styling */
+.contact-bar {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1001;
+}
+
+.contact-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-contact {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header-contact span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-contact .icon-phone,
+.header-contact .icon-location {
+    width: 16px;
+    height: 16px;
+}
+
+.phone-link {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    color: #f0f0f0;
+}
+
+.header-cta .btn-primary {
+    padding: 6px 16px;
+    font-size: 13px;
+    background-color: var(--primary-red);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.header-cta .btn-primary:hover {
+    background-color: #c00606;
+    transform: translateY(-1px);
 }
 
 /* Hide header-top on mobile - content shown in mobile menu */
@@ -280,11 +352,19 @@ a:hover {
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .logo img {
-    height: 60px;
+    height: 70px;
     width: auto;
+    max-width: 140px;
+    object-fit: contain;
 }
 
 /* Mobile menu toggle - visible by default */
@@ -407,8 +487,14 @@ a:hover {
         padding: 0;
         max-height: none;
         overflow: visible;
-        gap: 30px;
+        gap: 20px;
         align-items: center;
+    }
+    
+    .nav-menu li:last-child {
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: 1px solid var(--border-color);
     }
     
     .nav-menu li {
@@ -501,8 +587,24 @@ a:hover {
 }
 
 .nav-cta .btn-primary {
-    padding: 8px 20px;
-    font-size: 14px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--primary-red);
+    border: 2px solid var(--primary-red);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(224, 7, 7, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-cta .btn-primary:hover {
+    background-color: #c00606;
+    border-color: #c00606;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 7, 7, 0.4);
+    color: white;
 }
 
 /* Hero Section - Mobile First */

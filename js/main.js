@@ -326,8 +326,8 @@
         function updateHeader() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            // Add shadow on scroll
-            if (scrollTop > 10) {
+            // Add shadow and hide contact bar on scroll
+            if (scrollTop > 50) {
                 elements.header.classList.add('scrolled');
             } else {
                 elements.header.classList.remove('scrolled');

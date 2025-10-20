@@ -72,6 +72,21 @@
         height: 40px !important;
     }
     
+    /* Header mobile optimizations */
+    .logo img {
+        height: 60px !important;
+        max-width: 120px !important;
+    }
+    
+    .nav-cta .btn-primary {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+    }
+    
+    .contact-bar {
+        display: none !important;
+    }
+    
     /* Dropdown menu adjustments for mobile */
     .has-dropdown .dropdown-menu {
         position: static;
