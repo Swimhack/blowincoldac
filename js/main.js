@@ -55,20 +55,26 @@
             if (headerTopContainer && !elements.navMenu.querySelector('.mobile-menu-extra')) {
                 const extra = document.createElement('li');
                 extra.className = 'mobile-menu-extra';
-                // Clone the header-top content (contact + CTA)
-                extra.innerHTML = headerTopContainer.innerHTML;
-
-                // Enhance phone link for mobile accessibility/tap target
-                const phoneLink = extra.querySelector('a[href^="tel:"]');
-                if (phoneLink) {
-                    // Provide explicit accessible label
-                    const phoneText = phoneLink.textContent.trim();
-                    phoneLink.setAttribute('aria-label', `Call ${phoneText}`);
-                    phoneLink.classList.add('mobile-call-link');
+                
+                // Clone only the contact info (not the CTA button)
+                const headerContact = headerTopContainer.querySelector('.header-contact');
+                if (headerContact) {
+                    const contactDiv = document.createElement('div');
+                    contactDiv.className = 'header-contact';
+                    contactDiv.innerHTML = headerContact.innerHTML;
+                    extra.appendChild(contactDiv);
                 }
 
                 // Place it at the top of the mobile menu
                 elements.navMenu.insertBefore(extra, elements.navMenu.firstChild);
+                
+                // Add CTA button at the bottom
+                if (!elements.navMenu.querySelector('.mobile-menu-cta')) {
+                    const ctaLi = document.createElement('li');
+                    ctaLi.className = 'mobile-menu-cta';
+                    ctaLi.innerHTML = '<a href="contact.html#schedule" class="btn-primary">Schedule Service</a>';
+                    elements.navMenu.appendChild(ctaLi);
+                }
             }
         } catch (e) {
             console.warn('Unable to prepare mobile menu extras:', e);

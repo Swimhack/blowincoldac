@@ -82,6 +82,33 @@
         display: none !important;
     }
     
+    /* Mobile menu optimizations */
+    .nav-menu {
+        padding: 16px;
+    }
+    
+    .nav-menu li {
+        margin-bottom: 6px;
+    }
+    
+    .nav-menu a {
+        padding: 14px 10px;
+        font-size: 0.95rem;
+    }
+    
+    .mobile-menu-extra {
+        padding: 16px 0;
+    }
+    
+    .mobile-menu-extra .phone-link {
+        font-size: 0.95rem;
+    }
+    
+    .mobile-menu-cta .btn-primary {
+        padding: 14px;
+        font-size: 1rem;
+    }
+    
     /* Dropdown menu adjustments for mobile */
     .has-dropdown .dropdown-menu {
         position: static;
