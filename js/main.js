@@ -56,12 +56,30 @@
                 const extra = document.createElement('li');
                 extra.className = 'mobile-menu-extra';
                 
-                // Clone only the contact info (not the CTA button)
+                // Clone the contact info properly
                 const headerContact = headerTopContainer.querySelector('.header-contact');
                 if (headerContact) {
                     const contactDiv = document.createElement('div');
                     contactDiv.className = 'header-contact';
-                    contactDiv.innerHTML = headerContact.innerHTML;
+                    
+                    // Clone phone section
+                    const phoneSection = headerContact.querySelector('.header-phone');
+                    if (phoneSection) {
+                        const phoneDiv = document.createElement('div');
+                        phoneDiv.className = 'header-phone';
+                        phoneDiv.innerHTML = phoneSection.innerHTML;
+                        contactDiv.appendChild(phoneDiv);
+                    }
+                    
+                    // Clone address section
+                    const addressSection = headerContact.querySelector('.header-address');
+                    if (addressSection) {
+                        const addressDiv = document.createElement('div');
+                        addressDiv.className = 'header-address';
+                        addressDiv.innerHTML = addressSection.innerHTML;
+                        contactDiv.appendChild(addressDiv);
+                    }
+                    
                     extra.appendChild(contactDiv);
                 }
 
