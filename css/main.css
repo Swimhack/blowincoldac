@@ -438,15 +438,16 @@ a:hover {
 /* Mobile menu extra content (from header-top) */
 .mobile-menu-extra {
     display: block;
-    padding: 0 0 20px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .mobile-menu-extra .header-contact {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .mobile-menu-extra .header-phone {
@@ -458,26 +459,32 @@ a:hover {
 .mobile-menu-extra .phone-link {
     display: inline-flex;
     align-items: center;
-    font-size: 1.1rem;
+    gap: 8px;
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: white;
     text-decoration: none;
-    padding: 0;
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    width: auto !important;
-    min-height: auto !important;
+    padding: 12px 16px;
+    background-color: var(--primary-red);
+    border: 2px solid var(--primary-red);
+    border-radius: 8px;
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .mobile-menu-extra .phone-link:hover {
-    color: var(--secondary-teal);
+    background-color: #c00606;
+    border-color: #c00606;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(224, 7, 7, 0.3);
 }
 
 .mobile-menu-extra .icon-phone {
     width: 20px;
     height: 20px;
-    stroke: var(--primary-blue);
+    stroke: white;
 }
 
 .mobile-menu-extra .header-address {
@@ -498,8 +505,8 @@ a:hover {
 }
 
 .mobile-menu-cta {
-    margin-top: 28px;
-    padding-top: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
     border-top: 1px solid var(--border-color);
 }
 
