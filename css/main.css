@@ -491,12 +491,6 @@ a:hover {
         align-items: center;
     }
     
-    .nav-menu li:last-child {
-        margin-left: 20px;
-        padding-left: 20px;
-        border-left: 1px solid var(--border-color);
-    }
-    
     .nav-menu li {
         width: auto;
     }
@@ -586,26 +580,6 @@ a:hover {
     color: var(--primary-blue);
 }
 
-.nav-cta .btn-primary {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 700;
-    background-color: var(--primary-red);
-    border: 2px solid var(--primary-red);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(224, 7, 7, 0.3);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.nav-cta .btn-primary:hover {
-    background-color: #c00606;
-    border-color: #c00606;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(224, 7, 7, 0.4);
-    color: white;
-}
 
 /* Hero Section - Mobile First */
 .hero-section {
