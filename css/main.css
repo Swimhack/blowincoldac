@@ -376,7 +376,10 @@ a:hover {
     border: none;
     cursor: pointer;
     padding: 8px;
-    z-index: 9999;
+    z-index: 10000;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
 }
 
 .mobile-menu-toggle .hamburger-line {

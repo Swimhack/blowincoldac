@@ -34,6 +34,7 @@
     /* Mobile menu toggle animation */
     .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
         transform: rotate(45deg) translate(7px, 7px);
+        background-color: var(--text-dark);
     }
     
     .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
@@ -42,6 +43,13 @@
     
     .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
+        background-color: var(--text-dark);
+    }
+    
+    /* Ensure hamburger toggle remains visible when menu is open */
+    .mobile-menu-toggle.active {
+        opacity: 1;
+        visibility: visible;
     }
     
     /* Mission section mobile adjustments */
