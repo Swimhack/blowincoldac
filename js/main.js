@@ -90,45 +90,109 @@
         elements.mobileMenuToggle.addEventListener('click', function() {
             const isActive = elements.navMenu.classList.contains('active');
             
-            // Animate hamburger to X
+            // Toggle menu visibility
             elements.navMenu.classList.toggle('active');
             elements.mobileMenuToggle.classList.toggle('active');
             
-            // Set ARIA attributes
+            // Set ARIA attributes for accessibility
             elements.mobileMenuToggle.setAttribute('aria-expanded', !isActive);
+            
+            // Update screen reader text
+            const srText = elements.mobileMenuToggle.querySelector('.sr-only');
+            if (srText) {
+                srText.textContent = isActive ? 'Menu' : 'Close Menu';
+            }
             
             // Prevent body scroll when menu is open
             document.body.style.overflow = isActive ? '' : 'hidden';
             
-            // Add slide animation
+            // Focus management for accessibility
+            if (!isActive) {
+                // Menu is opening - focus first menu item after animation
+                setTimeout(() => {
+                    const firstMenuItem = elements.navMenu.querySelector('a');
+                    if (firstMenuItem) firstMenuItem.focus();
+                }, 100);
+            } else {
+                // Menu is closing - return focus to toggle button
+                elements.mobileMenuToggle.focus();
+            }
+            
+            // Add slide animation with better performance
             if (!isActive) {
                 elements.navMenu.style.transform = 'translateX(0)';
                 elements.navMenu.style.opacity = '1';
             } else {
-                elements.navMenu.style.transform = 'translateX(100%)';
+                elements.navMenu.style.transform = 'translateX(-100%)';
                 elements.navMenu.style.opacity = '0';
             }
         });
 
+        // Helper function to close mobile menu
+        function closeMobileMenu() {
+            elements.navMenu.classList.remove('active');
+            elements.mobileMenuToggle.classList.remove('active');
+            elements.mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            
+            const srText = elements.mobileMenuToggle.querySelector('.sr-only');
+            if (srText) {
+                srText.textContent = 'Menu';
+            }
+            
+            // Return focus to toggle button
+            elements.mobileMenuToggle.focus();
+        }
+        
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!elements.mobileMenuToggle.contains(e.target) && 
                 !elements.navMenu.contains(e.target) && 
                 elements.navMenu.classList.contains('active')) {
-                elements.navMenu.classList.remove('active');
-                elements.mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMobileMenu();
             }
         });
 
         // Close menu on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && elements.navMenu.classList.contains('active')) {
-                elements.navMenu.classList.remove('active');
-                elements.mobileMenuToggle.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMobileMenu();
             }
         });
+        
+        // Close menu when clicking on a navigation link
+        elements.navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' && !e.target.getAttribute('aria-haspopup')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Handle touch events for better mobile experience
+        let touchStartX = null;
+        let touchStartY = null;
+        
+        elements.navMenu.addEventListener('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        elements.navMenu.addEventListener('touchend', function(e) {
+            if (!touchStartX || !touchStartY) return;
+            
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            
+            // Swipe left to close menu
+            if (Math.abs(deltaX) > Math.abs(deltaY) && deltaX < -50) {
+                closeMobileMenu();
+            }
+            
+            touchStartX = null;
+            touchStartY = null;
+        }, { passive: true });
     }
 
     // Video Controls

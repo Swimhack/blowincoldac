@@ -35,29 +35,41 @@
         </div>
         <nav class="main-nav">
             <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png?v=" alt="Blowin' Cold AC Logo" width="220" height="100" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" id="logo-img">
-                    <div class="logo-text" style="display:none; color:#04356f; font-weight:bold; font-size:18px;">Blowin' Cold AC</div>
-                </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="has-dropdown">
-                        <a href="services.html">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="services.html#repair">AC Repair</a></li>
-                            <li><a href="services.html#installation">AC Installation</a></li>
-                            <li><a href="services.html#maintenance">Maintenance Plans</a></li>
-                            <li><a href="services.html#commercial">Commercial HVAC</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo-wrapper">
+                        <a href="index.html" class="logo" aria-label="Blowin' Cold AC Homepage">
+                            <img src="images/logo.png?v=" alt="Blowin' Cold AC Logo" width="120" height="60" id="logo-img">
+                            <span class="logo-text">Blowin' Cold AC</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation Menu -->
+                    <ul class="nav-menu" role="menubar">
+                        <li role="menuitem"><a href="index.html" class="nav-link">Home</a></li>
+                        <li role="menuitem" class="has-dropdown">
+                            <a href="services.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="menuitem"><a href="services.html#repair">AC Repair</a></li>
+                                <li role="menuitem"><a href="services.html#installation">AC Installation</a></li>
+                                <li role="menuitem"><a href="services.html#maintenance">Maintenance Plans</a></li>
+                                <li role="menuitem"><a href="services.html#commercial">Commercial HVAC</a></li>
+                            </ul>
+                        </li>
+                        <li role="menuitem"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li role="menuitem"><a href="contact.html" class="nav-link active">Contact</a></li>
+                        <li role="menuitem">
+                            <a href="tel:+12816472653" class="btn btn-primary nav-cta">Schedule Service</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>

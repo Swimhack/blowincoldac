@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Blowin' Cold AC - Professional HVAC services in Katy, TX. AC repair, installation, and maintenance. Professional HVAC contractor. Call 281-647-2653">
     <meta name="keywords" content="AC repair Katy TX, HVAC Katy Texas, air conditioning service Katy, AC installation, HVAC contractor">
     <meta property="og:title" content="Blowin' Cold AC - Professional HVAC Services in Katy, TX">
     <meta property="og:description" content="Expert AC repair, installation, and maintenance in Katy, TX. Professional HVAC contractor.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://blowincoldac.com">
+    <meta name="theme-color" content="#04356f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Blowin' Cold AC - Professional HVAC Services in Katy, TX | 281-647-2653</title>
     <link rel="stylesheet" href="css/main.css?v=20251003">
     <link rel="stylesheet" href="css/responsive.css?v=20251003">
@@ -65,29 +68,41 @@
         </div>
         <nav class="main-nav">
             <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png?v=" alt="Blowin' Cold AC Logo" width="220" height="100" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" id="logo-img">
-                    <div class="logo-text" style="display:none; color:#04356f; font-weight:bold; font-size:18px;">Blowin' Cold AC</div>
-                </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li class="has-dropdown">
-                        <a href="services.html">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="services.html#repair">AC Repair</a></li>
-                            <li><a href="services.html#installation">AC Installation</a></li>
-                            <li><a href="services.html#maintenance">Maintenance Plans</a></li>
-                            <li><a href="services.html#commercial">Commercial HVAC</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo-wrapper">
+                        <a href="index.html" class="logo" aria-label="Blowin' Cold AC Homepage">
+                            <img src="images/logo.png?v=" alt="Blowin' Cold AC Logo" width="120" height="60" id="logo-img">
+                            <span class="logo-text">Blowin' Cold AC</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation Menu -->
+                    <ul class="nav-menu" role="menubar">
+                        <li role="menuitem"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li role="menuitem" class="has-dropdown">
+                            <a href="services.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="menuitem"><a href="services.html#repair">AC Repair</a></li>
+                                <li role="menuitem"><a href="services.html#installation">AC Installation</a></li>
+                                <li role="menuitem"><a href="services.html#maintenance">Maintenance Plans</a></li>
+                                <li role="menuitem"><a href="services.html#commercial">Commercial HVAC</a></li>
+                            </ul>
+                        </li>
+                        <li role="menuitem"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li role="menuitem"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li role="menuitem">
+                            <a href="tel:+12816472653" class="btn btn-primary nav-cta">Schedule Service</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -450,36 +465,47 @@
 
     <!-- Footer -->
     <footer class="main-footer">
+        <!-- Emergency CTA Banner -->
+        <div class="footer-emergency">
+            <div class="container">
+                <h3>Need Emergency HVAC Service?</h3>
+                <a href="tel:281-647-2653" class="emergency-phone">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Call Now: 281-647-2653
+                </a>
+            </div>
+        </div>
+
         <div class="container">
+            <!-- Service Areas Section -->
+            <div class="footer-service-areas">
+                <h3>Areas We Serve in Greater Houston</h3>
+                <div class="service-areas-grid">
+                    <div class="service-area-item">Katy</div>
+                    <div class="service-area-item">Cinco Ranch</div>
+                    <div class="service-area-item">Fulshear</div>
+                    <div class="service-area-item">Richmond</div>
+                    <div class="service-area-item">Sugar Land</div>
+                    <div class="service-area-item">Missouri City</div>
+                    <div class="service-area-item">Cypress</div>
+                    <div class="service-area-item">West Houston</div>
+                    <div class="service-area-item">Stafford</div>
+                    <div class="service-area-item">Rosenberg</div>
+                    <div class="service-area-item">Tomball</div>
+                    <div class="service-area-item">Spring</div>
+                </div>
+            </div>
+
+            <!-- Customer Reviews Section -->
+            <div class="footer-reviews">
+                <h3>Trusted by Houston Area Customers</h3>
+                <div class="star-rating">★★★★★</div>
+                <p class="review-text">"Professional service, fair pricing, and same-day repairs. Highly recommend Blowin' Cold AC for all your HVAC needs!"</p>
+            </div>
+
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>About Blowin' Cold AC</h3>
-                    <p>Professional HVAC services in Katy, TX since 2004. Licensed, insured, and committed to your comfort.</p>
-                    <div class="footer-social">
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="services.html#maintenance">Maintenance Plans</a></li>
-                        <li><a href="contact.html#schedule">Schedule Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="services.html#repair">AC Repair</a></li>
-                        <li><a href="services.html#installation">AC Installation</a></li>
-                        <li><a href="services.html#maintenance">Preventive Maintenance</a></li>
-                        <li><a href="services.html#residential">Residential HVAC</a></li>
-                        <li><a href="services.html#commercial">Commercial HVAC</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <div class="footer-contact">
@@ -494,14 +520,52 @@
                         </p>
                         <p>
                             <strong>Hours:</strong><br>
-                            Regular Hours: Mon-Sat 7AM-8PM<br>
-                            Licensed & Insured
+                            Mon-Sat: 7AM-8PM<br>
+                            Emergency Service Available<br>
+                            <strong>Licensed & Insured</strong>
                         </p>
                     </div>
                 </div>
+                
+                <div class="footer-column">
+                    <h3>HVAC Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#repair">AC Repair & Diagnosis</a></li>
+                        <li><a href="services.html#installation">New AC Installation</a></li>
+                        <li><a href="services.html#maintenance">Preventive Maintenance</a></li>
+                        <li><a href="services.html#residential">Residential HVAC</a></li>
+                        <li><a href="services.html#commercial">Commercial HVAC</a></li>
+                        <li><a href="services.html#emergency">Emergency Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Schedule</a></li>
+                        <li><a href="services.html#brands">Brands We Service</a></li>
+                        <li><a href="contact.html#quote">Free Quote</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Why Choose Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html#experience">20+ Years Experience</a></li>
+                        <li><a href="about.html#licensed">Licensed & Insured</a></li>
+                        <li><a href="about.html#reviews">5-Star Reviews</a></li>
+                        <li><a href="services.html#warranty">Service Warranty</a></li>
+                        <li><a href="about.html#pricing">Upfront Pricing</a></li>
+                        <li><a href="contact.html#emergency">24/7 Emergency</a></li>
+                    </ul>
+                </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2025</span> Blowin' Cold AC. All rights reserved.</p>
+                <p>&copy; <span id="current-year">2025</span> Blowin' Cold AC - Professional HVAC Services in Katy, TX. All rights reserved.</p>
                 <p class="footer-credit">Website by <a href="http://www.stricklandtechnology.net" target="blank" title="Web Designer Houston">Strickland Technology</a></p>
             </div>
         </div>

@@ -35,29 +35,41 @@
         </div>
         <nav class="main-nav">
             <div class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png?v=" alt="Blowin' Cold AC Logo" width="220" height="100" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" id="logo-img">
-                    <div class="logo-text" style="display:none; color:#04356f; font-weight:bold; font-size:18px;">Blowin' Cold AC</div>
-                </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="has-dropdown">
-                        <a href="services.html">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="services.html#repair">AC Repair</a></li>
-                            <li><a href="services.html#installation">AC Installation</a></li>
-                            <li><a href="services.html#maintenance">Maintenance Plans</a></li>
-                            <li><a href="services.html#commercial">Commercial HVAC</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo-wrapper">
+                        <a href="index.html" class="logo" aria-label="Blowin' Cold AC Homepage">
+                            <img src="images/logo.png?v=" alt="Blowin' Cold AC Logo" width="120" height="60" id="logo-img">
+                            <span class="logo-text">Blowin' Cold AC</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation Menu -->
+                    <ul class="nav-menu" role="menubar">
+                        <li role="menuitem"><a href="index.html" class="nav-link">Home</a></li>
+                        <li role="menuitem" class="has-dropdown">
+                            <a href="services.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="menuitem"><a href="services.html#repair">AC Repair</a></li>
+                                <li role="menuitem"><a href="services.html#installation">AC Installation</a></li>
+                                <li role="menuitem"><a href="services.html#maintenance">Maintenance Plans</a></li>
+                                <li role="menuitem"><a href="services.html#commercial">Commercial HVAC</a></li>
+                            </ul>
+                        </li>
+                        <li role="menuitem"><a href="about.html" class="nav-link active">About Us</a></li>
+                        <li role="menuitem"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li role="menuitem">
+                            <a href="tel:+12816472653" class="btn btn-primary nav-cta">Schedule Service</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -106,6 +118,53 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section class="mission-section" style="padding: 80px 0; background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal)); color: white; position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="mission-content" style="text-align: center; max-width: 800px; margin: 0 auto; position: relative; z-index: 2;">
+                <div class="mission-icon" style="width: 100px; height: 100px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; border: 2px solid rgba(255, 255, 255, 0.2);">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h2 class="mission-title" style="color: white; font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Our Mission</h2>
+                <div class="mission-statement" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                    <p style="font-size: 1.25rem; line-height: 1.8; margin: 0; color: rgba(255, 255, 255, 0.95); font-weight: 500;">
+                        Our mission at <strong style="color: white;">Blowin' Cold AC</strong> is to provide exceptional HVAC service that our customers can trust. We believe in <strong style="color: #ffd700;">affordable pricing</strong>, <strong style="color: #ffd700;">dependable results</strong>, and operating with <strong style="color: #ffd700;">honesty and integrity</strong> in every job we do.
+                    </p>
+                </div>
+                <div class="mission-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div class="highlight-item" style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <span style="font-size: 24px;">💰</span>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 8px; font-size: 1.1rem;">Affordable Pricing</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; margin: 0;">Fair, transparent pricing with no hidden fees</p>
+                    </div>
+                    <div class="highlight-item" style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <span style="font-size: 24px;">✅</span>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 8px; font-size: 1.1rem;">Dependable Results</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; margin: 0;">Consistent, reliable service every time</p>
+                    </div>
+                    <div class="highlight-item" style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <span style="font-size: 24px;">🤝</span>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 8px; font-size: 1.1rem;">Honesty & Integrity</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; margin: 0;">Transparent communication and ethical practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background decorative elements -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; z-index: 1;"></div>
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; background: rgba(255, 255, 255, 0.03); border-radius: 50%; z-index: 1;"></div>
     </section>
 
     <!-- Our Values Section -->

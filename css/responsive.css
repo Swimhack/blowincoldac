@@ -1,53 +1,19 @@
-/* Responsive Stylesheet - Blowin' Cold AC */
+/* Responsive Enhancements - Blowin' Cold AC Mobile-First */
 
-/* Tablet Styles (768px - 1023px) */
+/* Fine-tuning for specific breakpoints */
 @media screen and (max-width: 1023px) {
-    /* Navigation */
-    .nav-menu {
-        gap: 20px;
+    /* Additional tablet-specific refinements */
+    .hero-video-control {
+        width: 45px;
+        height: 45px;
     }
     
-    /* Hero Section */
-    .hero-title {
-        font-size: clamp(2rem, 5vw, 3rem);
-    }
-    
-    .hero-subtitle {
-        font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-    }
-    
-    /* Services Grid */
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    /* Features Grid */
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-    
-    /* Trusted Brands */
-    .brands-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .brand-highlights {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    /* Service Area */
-    .service-area-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    /* Footer */
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+    /* Optimize touch targets for tablets */
+    .testimonial-prev,
+    .testimonial-next {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
     }
 }
 
@@ -63,96 +29,50 @@
     }
 }
 
-/* Mobile Styles (320px - 767px) */
+/* Mobile-specific enhancements and overrides */
 @media screen and (max-width: 767px) {
-    /* Header */
-    .header-top {
-        padding: 10px 0;
+    /* Mobile menu toggle animation */
+    .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
     }
     
-    .header-top .container {
-        flex-direction: column;
-        gap: 10px;
+    .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
     }
     
-    .header-contact {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        width: 100%;
+    .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
     
-    .header-cta {
-        width: 100%;
+    /* Mission section mobile adjustments */
+    .mission-section .mission-title {
+        font-size: 2rem !important;
     }
     
-    
-    /* Navigation */
-    .main-nav {
-        padding: 10px 0;
+    .mission-section .mission-statement {
+        padding: 25px !important;
     }
     
-    .mobile-menu-toggle {
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px;
-        z-index: 9999;
-    }
-
-    .mobile-menu-toggle span {
-        display: block !important;
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-dark);
-        transition: var(--transition);
+    .mission-section .mission-statement p {
+        font-size: 1.1rem !important;
     }
     
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 100px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: var(--shadow-lg);
-        gap: 0;
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-        z-index: 999999;
+    .mission-section .mission-highlights {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
     }
     
-    .nav-menu.active {
-        display: flex;
-    }
-
-    /* Show the mobile-only extra header content only when the mobile menu is open */
-    .nav-menu.active .mobile-menu-extra {
-        display: block;
-        width: 100%;
+    .mission-section .mission-icon {
+        width: 80px !important;
+        height: 80px !important;
     }
     
-    .nav-menu li {
-        width: 100%;
+    .mission-section .mission-icon svg {
+        width: 40px !important;
+        height: 40px !important;
     }
     
-    .nav-menu a {
-        display: block;
-        padding: 15px 10px;
-        border-bottom: 1px solid var(--border-color);
-    }
-    
-    .nav-menu a.active::after {
-        display: none;
-    }
-    
+    /* Dropdown menu adjustments for mobile */
     .has-dropdown .dropdown-menu {
         position: static;
         opacity: 1;
@@ -168,193 +88,15 @@
         padding-left: 30px;
     }
     
-    .nav-cta {
-        margin-top: 20px;
-    }
-    
-    .nav-cta .btn-primary {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Hide the header-top bar on mobile; show its content inside the mobile menu */
-    .header-top {
-        display: none;
-    }
-
-    /* Mobile menu extra content styling (cloned from header-top) */
-    .mobile-menu-extra {
-        list-style: none;
-        padding: 10px 0 0;
-        margin: 10px 0 0;
-        border-top: 1px solid var(--border-color);
-    }
-    .mobile-menu-extra .header-contact {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        padding: 5px 0 10px;
-    }
-    .mobile-menu-extra .header-cta {
-        width: 100%;
-        padding-bottom: 10px;
-    }
-    .mobile-menu-extra .header-cta .btn-primary {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Make phone number a large, mobile-friendly tap target */
-    .mobile-menu-extra .phone-link,
-    .mobile-menu-extra a[href^="tel:"] {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: 1.375rem; /* ~22px */
-        font-weight: 700;
-        padding: 14px 16px;
-        min-height: 48px; /* meets mobile tap target guidance */
-        color: #ffffff;
-        background: var(--primary-blue);
-        border-radius: 8px;
-        text-decoration: none;
-        margin: 8px 0;
-    }
-
-    .mobile-menu-extra .phone-link:hover,
-    .mobile-menu-extra a[href^="tel:"]:hover {
-        background: #03295a;
-        color: #ffffff;
-    }
-
-    .mobile-menu-extra .phone-link:focus,
-    .mobile-menu-extra a[href^="tel:"]:focus {
-        outline: 3px solid rgba(4, 53, 111, 0.3);
-        outline-offset: 2px;
-    }
-
-    /* Hide the small inline phone icon so the button looks clean */
+    /* Hide phone icon in mobile menu for cleaner button look */
     .mobile-menu-extra .header-phone .icon-phone {
         display: none;
     }
     
-    /* Mobile menu toggle animation */
-    .mobile-menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 7px);
-    }
-    
-    .mobile-menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-    
-    /* Hero Section */
-    .hero-section {
-        margin-top: 100px;
-        height: 80vh;
-        min-height: 500px;
-    }
-    
-    .hero-title {
-        font-size: clamp(1.75rem, 6vw, 2.5rem);
-        margin-bottom: 15px;
-    }
-    
-    .hero-subtitle {
-        font-size: clamp(1rem, 3vw, 1.25rem);
-        margin-bottom: 20px;
-    }
-    
-    .hero-badges {
-        gap: 10px;
-        margin-bottom: 25px;
-    }
-    
-    .badge {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-    
-    .hero-actions {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    
-    .btn-large {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-    }
-    
-    .hero-video-control {
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-    }
-    
-    /* Services Section */
-    .services-section {
-        padding: 60px 0;
-    }
-    
-    .section-header {
-        margin-bottom: 40px;
-    }
-    
-    .section-title {
-        font-size: clamp(1.5rem, 5vw, 2rem);
-    }
-    
-    .section-subtitle {
-        font-size: 1rem;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .service-card {
-        padding: 25px;
-    }
-    
+    /* Service icon size adjustment */
     .service-icon {
         width: 70px;
         height: 70px;
-    }
-    
-    /* Features Section */
-    .features-section {
-        padding: 60px 0;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    /* Trusted Brands */
-    .brand-highlights {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .brands-cta {
-        padding: 25px 20px;
-    }
-    
-    .brands-cta .btn-primary,
-    .brands-cta .btn-secondary {
-        width: 100%;
-        margin: 5px 0;
-        justify-content: center;
     }
     
     .feature-icon {
@@ -362,181 +104,55 @@
         height: 60px;
     }
     
-    /* Testimonials Section */
-    .testimonials-section {
-        padding: 60px 0;
+    /* Video control positioning */
+    .hero-video-control {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
     }
     
-    .testimonial-card {
-        padding: 25px;
-    }
-    
-    .testimonial-text {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    .testimonial-controls {
-        gap: 15px;
-    }
-    
+    /* Testimonial controls */
     .testimonial-prev,
     .testimonial-next {
         width: 35px;
         height: 35px;
-        font-size: 20px;
-    }
-    
-    /* Service Area Section */
-    .service-area-section {
-        padding: 60px 0;
-    }
-    
-    .area-list {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    
-    .service-area-cta {
-        padding: 30px 20px;
-    }
-    
-    .service-area-cta .btn-primary,
-    .service-area-cta .btn-secondary {
-        width: 100%;
-        margin: 5px 0;
-        justify-content: center;
-    }
-    
-    /* CTA Section */
-    .cta-section {
-        padding: 60px 0;
-    }
-    
-    .cta-title {
-        font-size: clamp(1.5rem, 5vw, 2rem);
-    }
-    
-    .cta-subtitle {
-        font-size: 1.125rem;
-        margin-bottom: 25px;
-    }
-    
-    .cta-actions {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cta-actions .btn-large {
-        width: 100%;
-        max-width: 280px;
-    }
-    
-    /* Footer */
-    .main-footer {
-        padding: 40px 0 20px;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .footer-column h3 {
-        font-size: 1.25rem;
-        margin-bottom: 15px;
-    }
-    
-    .footer-bottom {
-        padding-top: 20px;
-    }
-    
-    .footer-bottom p {
-        margin-bottom: 10px;
+        font-size: 18px;
     }
 }
 
-/* Small Mobile (max-width: 479px) */
+/* Small Mobile (max-width: 479px) - Additional optimizations */
 @media screen and (max-width: 479px) {
-    /* Container */
     .container {
-        padding: 0 15px;
+        padding: 0 12px;
     }
     
-    /* Typography */
-    body {
-        font-size: 14px;
-    }
-    
-    h1 {
-        font-size: 1.75rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1.25rem;
-    }
-    
-    /* Buttons */
-    .btn-primary,
-    .btn-secondary,
-    .btn-white {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-    
-    .btn-large {
-        padding: 14px 28px;
-        font-size: 16px;
-    }
-    
-    /* Header Contact */
-    .header-contact {
-        font-size: 12px;
-    }
-    
-    /* Hero Section */
     .hero-section {
         height: 70vh;
         min-height: 450px;
     }
     
     .hero-content {
-        padding: 0 10px;
+        padding: 0 8px;
     }
     
-    /* Service Cards */
     .service-card {
         padding: 20px;
     }
     
-    .service-title {
-        font-size: 1.125rem;
-    }
-    
-    .service-description {
-        font-size: 14px;
+    .footer-emergency {
+        margin: 0 12px 30px 12px;
     }
 }
 
-/* Large Desktop (1440px+) */
+/* Large Desktop (1440px+) - Enhanced spacing */
 @media screen and (min-width: 1440px) {
     .container {
         max-width: 1320px;
     }
     
-    .hero-title {
-        font-size: 4.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 2rem;
-    }
-    
-    .services-grid {
+    .services-grid,
+    .features-grid {
         gap: 40px;
     }
     
