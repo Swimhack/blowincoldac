@@ -410,18 +410,18 @@ a:hover {
 
 .nav-menu li {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .nav-menu a {
-    display: block;
-    padding: 16px 12px;
-    min-height: 44px;
     display: flex;
     align-items: center;
+    padding: 14px 12px;
+    min-height: 48px;
     border-radius: 6px;
     color: var(--text-dark);
     font-weight: 500;
+    font-size: 1rem;
     transition: all 0.3s ease;
     border-bottom: none;
 }
@@ -435,72 +435,94 @@ a:hover {
 /* Mobile menu extra content (from header-top) */
 .mobile-menu-extra {
     display: block;
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .mobile-menu-extra .header-contact {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.mobile-menu-extra .header-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .mobile-menu-extra .phone-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-blue);
     text-decoration: none;
-    padding: 8px 0;
+    padding: 0;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    min-height: auto !important;
 }
 
 .mobile-menu-extra .phone-link:hover {
     color: var(--secondary-teal);
 }
 
+.mobile-menu-extra .icon-phone {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary-blue);
+}
+
 .mobile-menu-extra .header-address {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 10px;
     font-size: 0.9rem;
     color: var(--text-gray);
-    padding: 4px 0;
+    line-height: 1.4;
+}
+
+.mobile-menu-extra .icon-location {
+    width: 18px;
+    height: 18px;
+    stroke: var(--text-gray);
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .mobile-menu-cta {
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 28px;
+    padding-top: 24px;
     border-top: 1px solid var(--border-color);
 }
 
 .mobile-menu-cta .btn-primary {
     width: 100%;
-    padding: 16px;
+    padding: 18px 16px;
     font-size: 1.1rem;
     font-weight: 700;
     background-color: var(--primary-red);
-    border: 2px solid var(--primary-red);
+    border: none;
     border-radius: 8px;
     color: white;
     text-decoration: none;
     text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-    min-height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+    min-height: 56px;
+    box-shadow: 0 2px 8px rgba(224, 7, 7, 0.25);
 }
 
 .mobile-menu-cta .btn-primary:hover {
     background-color: #c00606;
-    border-color: #c00606;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(224, 7, 7, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(224, 7, 7, 0.35);
 }
 
 @media (min-width: 768px) {
