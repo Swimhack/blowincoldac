@@ -770,14 +770,14 @@ a:hover {
 }
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.75rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
     margin-bottom: 1.5rem;
     opacity: 0.95;
     line-height: 1.4;
@@ -810,12 +810,12 @@ a:hover {
 
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
     }
     
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
     }
     
@@ -839,11 +839,11 @@ a:hover {
 
 @media (min-width: 1024px) {
     .hero-title {
-        font-size: 4rem;
+        font-size: 5rem;
     }
     
     .hero-subtitle {
-        font-size: 1.75rem;
+        font-size: 2.25rem;
     }
 }
 
