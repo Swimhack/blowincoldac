@@ -170,15 +170,17 @@ a:hover {
 }
 
 .btn-secondary {
-    background-color: var(--primary-blue);
-    color: white;
+    background-color: white;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
 }
 
 .btn-secondary:hover {
-    background-color: #03295a;
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
-    color: white;
 }
 
 .btn-white {
