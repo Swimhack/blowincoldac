@@ -33,8 +33,7 @@
 @media screen and (max-width: 767px) {
     /* Mobile menu toggle animation */
     .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 7px);
-        background-color: var(--text-dark);
+        transform: rotate(45deg) translate(8px, 8px);
     }
     
     .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
@@ -42,8 +41,7 @@
     }
     
     .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-        background-color: var(--text-dark);
+        transform: rotate(-45deg) translate(8px, -8px);
     }
     
     /* Ensure hamburger toggle remains visible when menu is open */
@@ -80,42 +78,13 @@
         height: 40px !important;
     }
     
-    /* Header mobile optimizations */
-    .logo img {
-        height: 60px !important;
-        max-width: 120px !important;
-    }
+    /* Header mobile optimizations - removed override to use main.css values */
     
     .contact-bar {
         display: none !important;
     }
     
-    /* Mobile menu optimizations */
-    .nav-menu {
-        padding: 16px;
-    }
-    
-    .nav-menu li {
-        margin-bottom: 6px;
-    }
-    
-    .nav-menu a {
-        padding: 14px 10px;
-        font-size: 0.95rem;
-    }
-    
-    .mobile-menu-extra {
-        padding: 16px 0;
-    }
-    
-    .mobile-menu-extra .phone-link {
-        font-size: 0.95rem;
-    }
-    
-    .mobile-menu-cta .btn-primary {
-        padding: 14px;
-        font-size: 1rem;
-    }
+    /* Mobile menu already optimized in main.css */
     
     /* Dropdown menu adjustments for mobile */
     .has-dropdown .dropdown-menu {
