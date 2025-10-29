@@ -352,15 +352,18 @@ a:hover {
 
 .main-nav .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .logo:hover {
@@ -368,10 +371,28 @@ a:hover {
 }
 
 .logo img {
-    height: 200px;
-    width: auto;
-    max-width: 400px;
+    height: 80px;
+    width: 100%;
+    max-width: 100%;
     object-fit: contain;
+}
+
+/* Desktop logo styling */
+@media (min-width: 768px) {
+    .main-nav .container {
+        justify-content: space-between;
+    }
+    
+    .logo {
+        justify-content: flex-start;
+        width: auto;
+    }
+    
+    .logo img {
+        height: 400px;
+        width: auto;
+        max-width: 800px;
+    }
 }
 
 /* Mobile menu toggle - visible by default */
@@ -384,9 +405,16 @@ a:hover {
     cursor: pointer;
     padding: 8px;
     z-index: 10000;
-    position: relative;
+    position: absolute;
+    right: 16px;
     opacity: 1;
     visibility: visible;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
 }
 
 .mobile-menu-toggle .hamburger-line {
