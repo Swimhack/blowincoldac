@@ -362,10 +362,12 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 100%;
 }
 
 .logo-wrapper {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
+    min-width: 0;
 }
 
 .logo {
@@ -420,11 +422,12 @@ a:hover {
     padding: 10px;
     z-index: 10000;
     position: relative;
-    order: 3;
+    flex-shrink: 0;
     opacity: 1;
     visibility: visible;
     border-radius: 6px;
     transition: background-color 0.3s ease;
+    margin-left: auto;
 }
 
 .mobile-menu-toggle:hover {
@@ -466,7 +469,6 @@ a:hover {
     overflow-y: auto;
     z-index: 9998;
     list-style: none;
-    order: 4;
 }
 
 .nav-menu.active {
@@ -618,9 +620,9 @@ a:hover {
         overflow: visible;
         gap: 8px;
         align-items: center;
-        order: 2;
         flex: 1;
         justify-content: flex-end;
+        margin-left: auto;
     }
     
     .nav-menu li {
